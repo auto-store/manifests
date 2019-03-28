@@ -2,8 +2,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-   name: nginx-pod 
-   namespace: name1
+   name: nginx-pod
+   namespace: ##EDIT-NAMESPACE**
+   labels: 
+      app: nginx 
 spec:
  containers:
       - name: nginx
