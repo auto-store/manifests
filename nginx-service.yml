@@ -5,6 +5,8 @@ metadata:
   name: nginx-deployment 
   namespace: ##YOUR-NAMESPACE## 
 spec:
+  selector:
+    app: nginx
   ports:
   - name: http
     port: 8080
