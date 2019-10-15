@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: ansible
+spec:
+  selector:
+    matchLabels:
+      app: ansible
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ansible
+    spec:
+      volumes: 
+      - name: ansible-vol
+        persistentVolumeClaim:
+         claimName: ansible-vol
+      containers:
+      - name: netapp-ansible
+        image: schmots1/netapp-ansible
+        volumeMounts:
+          - name: ansible-vol
+            mountPath: /etc/ansible
+

@@ -1,8 +1,7 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: nginx
-  namespace: ##EDIT-NAMESPACE## 
+  name: nginx 
 spec:
   selector:
     matchLabels:

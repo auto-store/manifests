@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nginx-vol
+  name: ansible-vol
 spec:
   accessModes:
     - ReadWriteMany
