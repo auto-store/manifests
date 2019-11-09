@@ -4,8 +4,8 @@ metadata:
   name: nginx-vol
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: netapp-file
+  storageClassName: solidfire-bronze 
